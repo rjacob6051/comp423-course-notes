@@ -38,8 +38,7 @@ For this step, you want to create a new folder called ".devcontainer", with a si
         "golang.go"
       ]
     }
-  },
-  "postCreateCommand": "go mod tidy"
+  }
 }
 ```
 While all of these commands are not too important for a beginner, some readers might want a quick explanation of what each line does:
@@ -47,7 +46,6 @@ While all of these commands are not too important for a beginner, some readers m
  - name: Creates the name of the dev container
  - image: Makes the logo of the devcontainer the official Microsoft Go DevContainer image.
  - extensions: This installs the officail Go plugin for VSCode (the editor we are using)
- - postCreateCommand: Once the container is created, this will automatically run the command ```go mod tidy```, which, as the name suggests, tidies things up by cleaning/managing dependencies
 
 ## Step 4: Opening the Container in VSCode
 
@@ -63,7 +61,7 @@ go version
 ```
 If you get an output like...
 ``` bash
-TBD
+go version go1.23.4 linux/arm64
 ```
 ... your Go has been installed correctly within your Dev Container! Congrats!
 
