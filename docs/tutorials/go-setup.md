@@ -12,6 +12,10 @@ Before starting this tutorial, there are a couple of things you must have instal
 
 So why do we need these? Going from top to bottom, Visual Studio Code is a common choice for code editing, and the one we will be using to write our own Go code. Docker allows us to create *isolated development environments* through **containers**. Finally, the VSCode Dev Container extension will allow us to open out own project within a Docker container.
 
+!!! Notice
+
+    With docker installed, VS Code might prompt you to install the extension already. Otherwise, search for the Dev Container extension in the app or use the link above. 
+
 ## Step 1: Create a New Directory
 ``` bash
 mkdir go-dev-container
@@ -24,6 +28,10 @@ This will create a new directory, called go-dev-container, and change your curre
 git init
 ```
 This turns your directory into a git repository, to put it simply.
+
+!!! Notice
+
+    This does not sync your branch with a remote GitHub repository. Refer back to [this](https://comp423-25s.github.io/resources/git/ch4-git-remote-fetch-push-pull/) earlier lesson to set up a remote repository and save your code to GitHub.
 
 ## Step 3: Create a New Dev Container Configuration
 For this step, you want to create a new folder called ".devcontainer", with a single file name "devcontainer.json". This is essentially setting up the programming environment that you will be doing your work in.
@@ -64,6 +72,10 @@ If you get an output like...
 go version go1.23.4 linux/arm64
 ```
 ... your Go has been installed correctly within your Dev Container! Congrats!
+
+!!! Notice
+
+    The version includes 'linux' instead of Windows or MacOS, which is what most likely not what you are using. This is because the version is referencing the OS of a Docker Devcontainer: Debian Linux 
 
 ## Step 6: Creating Your Program!
 Create a new file called ```main.go```, and copy and paste the following contents
